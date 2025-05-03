@@ -1,3 +1,3 @@
 # CIT Library Rooms Booking System
 
-## by Frances Anne Riconalla
+### by Frances Anne Riconalla
