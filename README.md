@@ -1,3 +1,3 @@
-# CIT Library Rooms Booking System
+# CIT-U Study Room Booking System"
 
 ### by Frances Anne Riconalla
