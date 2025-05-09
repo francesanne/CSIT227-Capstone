@@ -1,44 +1,14 @@
 public class DiscussionRoom extends Room {
-    private boolean hasTV;
-    private boolean hasWhiteboard;
-
-    public DiscussionRoom(String roomNumber, int capacity, boolean hasTV, boolean hasWhiteboard) {
-        super(roomNumber, capacity);
-        this.hasTV = hasTV;
-        this.hasWhiteboard = hasWhiteboard;
+   public DiscussionRoom(String roomNumber, int capacity){
+       super(roomNumber, capacity);
+   }
+    public String getRoomType(){
+       return "Discussion Room";
     }
-
-    public boolean hasTV() {
-        return hasTV;
+    public boolean isValidGroupSize(int groupSize){
+       return groupSize >=3 && groupSize<=5;
     }
-
-    public boolean hasWhiteboard() {
-        return hasWhiteboard;
-    }
-
-
-    public String getRoomType() {
-        return "Discussion Room";
-    }
-
-    public String getFeatures() {
-        String features = "";
-
-        if (hasTV) {
-            features += "TV";
-        }
-
-        if (hasWhiteboard) {
-            if (!features.isEmpty()) {
-                features += ", ";
-            }
-            features += "Whiteboard";
-        }
-
-        if (features.isEmpty()) {
-            features = "None";
-        }
-
-        return features;
+    public String toString(){
+        return super.toString() + "\nValid Group Size: 3-5 Persons";
     }
 }

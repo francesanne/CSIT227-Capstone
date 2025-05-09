@@ -1,48 +1,31 @@
 public class BookingSystem {
-    private String[] rooms = {"R001", "R002", "R003", "R004", "R005"};
+    private String[] rooms = {"DR1", "DR2", "DR3", "CH1", "C2"};
     private boolean[] roomAvailability = {true, true, true, true, true};
 
-    public void displayAvailableRooms() {
-        System.out.println("Available rooms:");
+
+    public boolean isRoomAvailable(String roomNumber) {
         for (int i = 0; i < rooms.length; i++) {
-            if (roomAvailability[i]) {
-                System.out.println(rooms[i] + " - Available");
-            } else {
-                System.out.println(rooms[i] + " - Booked");
+            if (rooms[i].equals(roomNumber)) {
+                return roomAvailability[i];
             }
         }
+        return false;
     }
 
     public void bookRoom(String roomNumber, String studentName) {
-        int roomIndex = -1;
-
         for (int i = 0; i < rooms.length; i++) {
             if (rooms[i].equals(roomNumber)) {
-                roomIndex = i;
-                break;
+                if (roomAvailability[i]) {
+                    roomAvailability[i] = false;
+                    System.out.println(studentName + " successfully booked " + roomNumber);
+                    FileHandler.saveBookingHistory(roomNumber, studentName);
+                } else {
+                    System.out.println("Room " + roomNumber + " is already booked.");
+                }
+                return;
             }
         }
 
-        if (roomIndex != -1) {
-            if (roomAvailability[roomIndex]) {
-                roomAvailability[roomIndex] = false;
-                System.out.println(studentName + " successfully booked room " + roomNumber + ".");
-            } else {
-                System.out.println("Room " + roomNumber + " is already booked.");
-            }
-        } else {
-            System.out.println("Invalid room number. Please try again.");
-        }
-    }
-
-    public void displayUpdatedRooms() {
-        System.out.println("Updated room availability:");
-        for (int i = 0; i < rooms.length; i++) {
-            if (roomAvailability[i]) {
-                System.out.println(rooms[i] + " - Available");
-            } else {
-                System.out.println(rooms[i] + " - Booked");
-            }
-        }
+        System.out.println("Invalid room number.");
     }
 }
