@@ -29,7 +29,7 @@ public class RoomBookingApp extends JFrame {
 
 
     public RoomBookingApp() {
-        rbSchedules = new JRadioButton[]{rbSchedule1, rbSchedule2, rbSchedule3, rbSchedule4, rbSchedule5};
+        rbSchedules = new JRadioButton[]{rbSchedule1, rbSchedule2, rbSchedule3, rbSchedule4, rbSchedule5, rbSchedule6};
         rbRooms = new JRadioButton[]{rbDiscussionRoom, rbCollaborativeHub};
 
         rbDiscussionRoom.setActionCommand("Discussion");

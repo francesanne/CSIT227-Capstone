@@ -14,10 +14,6 @@ public abstract class Person {
         this.college=college;
     }
 
-    public String getIdNumber(){
-        return idNumber;
-    }
-
     public String getFullName(){
         return firstName + " " + lastName;
     }

@@ -50,7 +50,16 @@ This project effectively utilizes classes and objects to model real-world entiti
 By encapsulating related data and methods in specific classes, the system ensures modularity, readability, and ease of maintenance.
 
 ---
+## Class Diagram (15%)
+The class diagram  features a GUI (`RoomBookingApp`) built with Swing components that interacts with a `RoomBookingManager` to handle room reservations. Two class hierarchies form the core: 
 
+(1) **Rooms**, with an abstract `Room` class extended by `DiscussionRoom` (3-5 people) and `CollaborativeHub` (3 people), which enforce group size rules; 
+
+(2) **Users**, with an abstract `Person` class inherited by `Student` and `Faculty` roles. The `RoomBookingManager` tracks room schedules, checks availability, and collaborates with the `FileHandler` to save bookings to a text file. Relationships include inheritance (room/user types), composition (GUI owns components and manager), and dependencies (manager uses file operations). Input validation ensures valid group sizes and prevents double bookings.
+
+![img_2.png](img_2.png)
+
+---
 ## Four OOP Principles (35%)
 
 ### 1. Abstraction
@@ -178,3 +187,13 @@ try (BufferedReader br = new BufferedReader(new FileReader(BOOKING_FILE))) {
 This allows persistent storage and retrieval of booking data across sessions.
 
 ---
+## Graphical User Interface (15%)
+The system features a user-friendly graphical user interface (GUI) designed to simplify the room reservation process for students and faculty. Built using Java Swing, the GUI allows users to select between room types (Discussion Rooms or Collaborative Hubs), specify group size, provide personal details (e.g., ID number, name, college), and choose an available time slot. Key components include radio buttons for room and schedule selection, text fields for inputting details, and combo boxes for dropdown options like user category and room numbers. Users can submit their booking or view the booking history with dedicated buttons.
+When users choose to view the booking history, a scrollable pop-up window displays all past bookings saved in the `booking_history.txt` file, ensuring transparency and easy access to records
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+---
+**Developer's Note:** The implementation of the **2D arrays** in the `RoomBookingManager` class, used for managing the room schedules, and the use of the **StringBuilder** for efficient file handling were guided by AI. While designing the system, AI provided insights into using these techniques for cleaner and more scalable solutions. These suggestions significantly optimized the code and improved its overall readability and performance.
+
+
