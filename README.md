@@ -202,6 +202,9 @@ When users choose to view the booking history, a scrollable pop-up window displa
 ![img_8.png](img_8.png)
 ![img_9.png](img_9.png)
 ---
-**Developer's Note:** The implementation of the **2D arrays** in the `RoomBookingManager` class, used for managing the room schedules, and the use of the **StringBuilder** for efficient file handling were guided by AI. While designing the system, AI provided insights into using these techniques for cleaner and more scalable solutions. These suggestions significantly optimized the code and improved its overall readability and performance.
+**Developer's Note:** 
 
+The implementation of the **2D arrays** in the `RoomBookingManager` class, used for managing the room schedules, and the use of the **StringBuilder** for efficient file handling were guided by AI. While designing the system, AI provided insights into using these techniques for cleaner and more scalable solutions. These suggestions significantly optimized the code and improved its overall readability and performance.
+
+The design and functionality of the **CIT-U Library Room Booking System** GUI take inspiration from the structure and flow of an **online form used in the CIT-U Library** for reservation requests. To explore the reference form, visit [this link](https://forms.office.com/r/dAx77b0G0C?origin=QRCode).
 
