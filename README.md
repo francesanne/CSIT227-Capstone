@@ -56,7 +56,7 @@ The class diagram  features a GUI (`RoomBookingApp`) built with Swing components
 
 (2) **Users**, with an abstract `Person` class inherited by `Student` and `Faculty` roles. The `RoomBookingManager` tracks room schedules, checks availability, and collaborates with the `FileHandler` to save bookings to a text file. Relationships include inheritance (room/user types), composition (GUI owns components and manager), and dependencies (manager uses file operations). Input validation ensures valid group sizes and prevents double bookings.
 
-![img_2.png](img_2.png)
+![img_10.png](img_10.png)
 
 ---
 ## Four OOP Principles (35%)
