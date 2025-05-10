@@ -197,6 +197,10 @@ When users choose to view the booking history, a scrollable pop-up window displa
 ![img_3.png](img_3.png)
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+![img_9.png](img_9.png)
 ---
 **Developer's Note:** The implementation of the **2D arrays** in the `RoomBookingManager` class, used for managing the room schedules, and the use of the **StringBuilder** for efficient file handling were guided by AI. While designing the system, AI provided insights into using these techniques for cleaner and more scalable solutions. These suggestions significantly optimized the code and improved its overall readability and performance.
 
