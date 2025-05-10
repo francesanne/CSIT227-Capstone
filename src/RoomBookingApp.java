@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RoomBookingApp extends JFrame {
-    private JPanel pnlMain;
+    public JPanel pnlMain;
     private JRadioButton rbDiscussionRoom;
     private JRadioButton rbCollaborativeHub;
     private JTextField tfIdNumber;
@@ -182,11 +182,11 @@ public class RoomBookingApp extends JFrame {
         return null;
     }
 
-    public static void main(String[] args) {
-        RoomBookingApp app = new RoomBookingApp();
-        app.setContentPane(app.pnlMain);
-        app.setSize(650, 700);
-        app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setVisible(true);
-    }
+//    public static void main(String[] args) {
+//        RoomBookingApp app = new RoomBookingApp();
+//        app.setContentPane(app.pnlMain);
+//        app.setSize(650, 700);
+//        app.setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        app.setVisible(true);
+//    }
 }
