@@ -29,6 +29,4 @@ public abstract class Person {
         return "Role: " + getRole() + "\nName: " + getFullName() + "\nID Number: " + idNumber + "\nCollege: " + college;
     }
 
-
-
 }

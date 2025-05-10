@@ -6,7 +6,7 @@ public class CollaborativeHub extends Room {
 
     @Override
     public String getRoomType() {
-        return "Standard Room";
+        return "Collaborative Hub";
     }
 
     @Override

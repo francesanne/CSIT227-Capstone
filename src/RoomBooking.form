@@ -434,7 +434,7 @@
             </constraints>
             <properties>
               <font name="Poppins ExtraBold" size="18"/>
-              <text value="View Available Rooms"/>
+              <text value="Booking History"/>
             </properties>
           </component>
         </children>
