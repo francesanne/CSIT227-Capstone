@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RoomBooking extends JFrame {
+public class RoomBookingApp extends JFrame {
     private JPanel pnlMain;
     private JRadioButton rbDiscussionRoom;
     private JRadioButton rbCollaborativeHub;
@@ -25,11 +25,15 @@ public class RoomBooking extends JFrame {
     private JRadioButton[] rbSchedules;
     private JRadioButton[] rbRooms;
 
-    private BookingSystem bookingSystem = new BookingSystem();
+    private RoomBookingManager bookingSystem = new RoomBookingManager();
 
-    public RoomBooking() {
+
+    public RoomBookingApp() {
         rbSchedules = new JRadioButton[]{rbSchedule1, rbSchedule2, rbSchedule3, rbSchedule4, rbSchedule5};
         rbRooms = new JRadioButton[]{rbDiscussionRoom, rbCollaborativeHub};
+
+        rbDiscussionRoom.setActionCommand("Discussion");
+        rbCollaborativeHub.setActionCommand("Collab");
 
         ButtonGroup scheduleGroup = new ButtonGroup();
         for (JRadioButton rb : rbSchedules) {
@@ -54,7 +58,6 @@ public class RoomBooking extends JFrame {
                 }
             }
         });
-
 
         btnViewAvailableRooms.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -135,9 +138,16 @@ public class RoomBooking extends JFrame {
         bookingSystem.bookRoom(roomNumber, repName, scheduleIndex);
 
 
+        String validGroupSize;
+        if (selectedRoom instanceof DiscussionRoom) {
+            validGroupSize = "3-5 Persons";
+        } else {
+            validGroupSize = "3 Persons";
+        }
+
         String successMessage = "Booking Successful!\n" +
                 "Room Type: " + selectedRoom.getRoomType() + "\n" +
-                "Valid Group Size: " + (selectedRoom instanceof DiscussionRoom ? "3-5 Persons" : "3 Persons") + "\n" +
+                "Valid Group Size: " + validGroupSize + "\n" +
                 "Room Number: " + selectedRoom.getRoomNumber() + "\n" +
                 "Number of People: " + groupSize + "\n" +
                 "User Category: " + userCategory;
@@ -173,7 +183,7 @@ public class RoomBooking extends JFrame {
     }
 
     public static void main(String[] args) {
-        RoomBooking app = new RoomBooking();
+        RoomBookingApp app = new RoomBookingApp();
         app.setContentPane(app.pnlMain);
         app.setSize(650, 700);
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);

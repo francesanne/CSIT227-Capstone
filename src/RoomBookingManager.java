@@ -1,4 +1,4 @@
-public class BookingSystem {
+public class RoomBookingManager {
     private final String[] rooms = {"DR1", "DR2", "DR3", "CH1", "CH2"};
     private final boolean[][] roomSchedules = new boolean[rooms.length][6];
     private final String[] scheduleTimes = {
