@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="783" height="936"/>
     </constraints>
-    <properties/>
+    <properties>
+      <foreground color="-1711515"/>
+    </properties>
     <border type="none"/>
     <children>
       <vspacer id="62365">
