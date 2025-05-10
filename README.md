@@ -189,8 +189,11 @@ This allows persistent storage and retrieval of booking data across sessions.
 ## Graphical User Interface (15%)
 
 
+
 The system features a user-friendly graphical user interface (GUI) designed to simplify the room reservation process for students and faculty. Built using Java Swing, the GUI allows users to select between room types (Discussion Rooms or Collaborative Hubs), specify group size, provide personal details (e.g., ID number, name, college), and choose an available time slot. Key components include radio buttons for room and schedule selection, text fields for inputting details, and combo boxes for dropdown options like user category and room numbers. Users can submit their booking or view the booking history with dedicated buttons.
-When users choose to view the booking history, a scrollable pop-up window displays all past bookings saved in the `booking_history.txt` file, ensuring transparency and easy access to records
+When users choose to view the booking history, a scrollable pop-up window displays all past bookings saved in the `booking_history.txt` file, ensuring transparency and easy access to records.
+
+
 ![img_3.png](img_3.png)
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
